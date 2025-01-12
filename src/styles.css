@@ -140,7 +140,7 @@ ul>.active{
     text-align: left;
 }
 
-.feature-title {
+.feature-title, h2 {
     font-size: 1.5em;
     font-weight: bold;
     color: #cacaca;
@@ -175,7 +175,7 @@ a {
 }
 
 footer{
-    background-color: #090c11;
+    background-color: #151E29;
     width: 100%;
     height: 10vh;
     display: flex;
@@ -185,6 +185,34 @@ footer{
     padding: 12px;
 }
 
+section{
+    background-color: #090c11;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+}
+
+section>div{
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+section>div>a{
+    background-color: #6e5494 !important;
+}
+
+section>div>div{
+    flex-grow: 1;
+    text-align: left;
+}
+
 hr{
     width: 80%;
     margin: 20px 0;
@@ -192,4 +220,9 @@ hr{
     margin: auto;
     margin-top: 2em;
     margin-bottom: 2em;
+}
+
+
+a.inline{
+    text-decoration: underline;
 }
