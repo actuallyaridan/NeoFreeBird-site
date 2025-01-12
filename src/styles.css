@@ -1,0 +1,192 @@
+/* General Reset */
+
+@font-face {
+    font-family: LibreFranklin;
+    src: url(/src/fonts/LibreFranklin.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "LibreFranklin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: #151E29;
+    color: #8d8d8d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header{
+    position: sticky;
+    top: 0;
+}
+
+header>div{
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    height: 4em;
+    background-color: #2d40589a;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: rgba(255, 255, 255, 0.575);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+ul>.active{
+    border-bottom: 2px solid #007aff;
+    color: white;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+
+}
+
+#app-info{
+    margin-top: 42px;
+}
+
+.app-icon {
+    width: 48px;
+    border-radius: 25%;
+}
+
+.app-name {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.app-description {
+    font-size: 1em;
+    color: #eeeeee;
+    margin-bottom: 20px;
+}
+
+.get-button {
+    background-color: #007aff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.get-button:hover {
+    background-color: #005bb5;
+}
+
+.screenshot-container {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    gap: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    scroll-behavior: smooth;
+}
+
+.screenshots {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    scroll-behavior: smooth;
+}
+
+.screenshot {
+    height: 60vh;
+    /* Fixed height */
+    background-color: #333333;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    flex: 0 0 auto;
+    text-align: center;
+    margin: auto;
+    aspect-ratio: 1/2.17;
+    border: 2px solid #333333;
+}
+
+.changelog {
+    text-align: left;
+}
+
+.feature-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #cacaca;
+    margin-bottom: 10px;
+}
+
+.feature-content {
+    font-size: 1em;
+    color: #b4b4b4;
+    line-height: 1.5;
+}
+
+div.feature{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+div.feature>div{
+    flex: 1;
+}
+
+.flipped{
+    flex-direction: row-reverse !important;
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+footer{
+    background-color: #090c11;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+hr{
+    width: 80%;
+    margin: 20px 0;
+    border: 1px solid #333333;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
