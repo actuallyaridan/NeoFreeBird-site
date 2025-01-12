@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeoFreeBird</title>
     <link rel="stylesheet" href="/src/styles.css">
+    <script src="/src/general.js" async></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
-    <header>
-
+    <header id="desktop-header">
         <div>
             <ul>
                 <p class="active">NeoFreeBird</p>
@@ -23,7 +23,29 @@
                 <a href="https://testflight.apple.com/join/6tvFJRz3" class="get-button" target="_blank">Get</a>
             </ul>
         </div>
-        </ul>
+    </header>
+
+    <header id="mobile-header">
+        <div>
+            <ul>
+                <p class="active">NeoFreeBird</p>
+            </ul>
+            <ul>
+                <li><button class="noUI" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button></li>
+            </ul>
+        </div>
+        <menu class="mobileMenu" id="mobileMenuID">
+            <ul>
+                <li>Details</li>
+                <li>Docs</li>
+            </ul>
+            <ul>
+                <li><i class="fa-brands fa-github" title="GitHub"></i></li>
+                <li><i class="fa-brands fa-twitter" title="Twitter"></i></li>
+                <a href="https://testflight.apple.com/join/6tvFJRz3" class="get-button" target="_blank">Get</a>
+            </ul>
+        </menu>
+
     </header>
 
     <main class="container">
