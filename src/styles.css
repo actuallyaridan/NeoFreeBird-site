@@ -47,6 +47,7 @@ ul{
     flex-direction: row;
     gap: 20px;
     color: rgba(255, 255, 255, 0.575);
+    border-bottom: 2px solid #007bff00;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -180,6 +181,8 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 12px;
 }
 
 hr{
