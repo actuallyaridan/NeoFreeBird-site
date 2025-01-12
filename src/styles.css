@@ -190,6 +190,8 @@ footer{
     align-items: center;
     text-align: center;
     padding: 12px;
+    box-sizing: border-box;
+    margin: 12px;
 }
 
 section{
@@ -232,6 +234,7 @@ hr{
 
 a.inline{
     text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 button.noUI{
