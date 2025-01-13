@@ -29,6 +29,7 @@ header{
     position: sticky;
     flex-direction: column;
     top: 0;
+    z-index: 2;
 }
 
 header>div{
@@ -53,14 +54,24 @@ ul{
     flex-direction: row;
     padding: 20px;
     gap: 20px;
-    color: rgba(255, 255, 255, 0.575);
-    border-bottom: 2px solid #007bff00;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
 
-ul>.active{
+li>a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.575);
+    border-bottom: 2px solid #007bff00;
+}
+
+li>a:hover{
+    color: rgba(255, 255, 255, 0.758);
+    transition: all 0.3s;
+    border-bottom: 2px solid #007bff9c;
+}
+
+li.active>a{
     border-bottom: 2px solid #007aff;
     color: white;
 }
@@ -120,18 +131,8 @@ ul>.active{
     scroll-behavior: smooth;
 }
 
-.screenshots {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    scroll-behavior: smooth;
-}
-
 .screenshot {
-    height: 60vh;
-    /* Fixed height */
+    width: 100%; /* Makes the screenshot adapt to container width */
     background-color: #333333;
     border-radius: 15px;
     background-size: cover;
@@ -139,8 +140,26 @@ ul>.active{
     flex: 0 0 auto;
     text-align: center;
     margin: auto;
-    aspect-ratio: 1/2.17;
     border: 2px solid #333333;
+
+    /* Aspect ratio fallback */
+    position: relative;
+    max-width: 200px; /* Constrain maximum width to make it less wide */
+    max-height: 60vh; /* Optional, adjust to fit within viewport */
+}
+
+.screenshot::before {
+    content: '';
+    display: block;
+    padding-top: calc(100% / 2.17); /* Maintain aspect ratio 1:2.17 */
+}
+
+.screenshot > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .changelog {
