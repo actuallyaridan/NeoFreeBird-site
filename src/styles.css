@@ -11,7 +11,7 @@ body{
 }
 
 * {
-
+    font-size: 1em;
     box-sizing: border-box;
     font-family: "LibreFranklin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
@@ -203,7 +203,8 @@ a {
 footer{
     background-color: #151E29;
     width: 100%;
-    height: 10vh;
+    height: fit-content;
+    min-height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,6 +212,14 @@ footer{
     padding: 12px;
     box-sizing: border-box;
     margin: 12px;
+    
+}
+
+footer>p{
+    color: rgba(255, 255, 255, 0.575);
+    font-size: 1em;
+    margin: 12px;
+    padding: 12px;
 }
 
 section{
@@ -222,6 +231,7 @@ section{
     align-items: center;
     text-align: center;
     padding: 12px;
+    margin: 12px;
 }
 
 section>div{
@@ -332,6 +342,8 @@ button.noUI{
 
     main{
         padding: 10vw;
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
 
     section{
