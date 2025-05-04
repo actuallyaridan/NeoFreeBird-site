@@ -142,11 +142,8 @@ li.active>a{
     text-align: center;
     margin: auto;
     border: 2px solid #333333;
-
-    /* Aspect ratio fallback */
-    position: relative;
-    max-width: 200px; /* Constrain maximum width to make it less wide */
-    max-height: 60vh; /* Optional, adjust to fit within viewport */
+    width: 15rem;
+    aspect-ratio: 1 / 2.17; /* Maintain aspect ratio 1:2.17 */
 }
 
 .screenshot::before {
