@@ -5,9 +5,93 @@
     src: url(/src/fonts/LibreFranklin.ttf);
 }
 
-body{
+/* The article fills all the space between header & footer */
+
+main {
+    margin-bottom: 5em;
+  flex: 1;
+}
+
+/* Core styles/functionality */
+.tab {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: top;
+    position: relative;
+    width: 100%;
+}
+
+.tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.tab__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.tab input:checked~.tab__content {
+    max-height: 10rem;
+}
+
+/* Visual styles */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 100%;
+}
+
+.tab__label,
+.tab__close {
+    display: flex;
+    color: white;
+    cursor: pointer;
+}
+
+.tab__label {
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+}
+
+.tab__label::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+}
+
+.tab input:checked+.tab__label::after {
+    transform: rotate(270deg);
+}
+
+.tab__content p {
+    margin: 0;
+    padding: 1rem;
+}
+
+.tab__close {
+    align-self: end;
+    justify-content: end;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+
+}
+
+body {
     margin: 0;
     padding: 0;
+    overflow-y: scroll;
 }
 
 * {
@@ -18,21 +102,21 @@ body{
 
 body {
     background-color: #151E29;
-    color: #8d8d8d;
+    color: #bbbbbb;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
 }
 
-header{
+header {
     position: sticky;
     flex-direction: column;
     top: 0;
     z-index: 2;
 }
 
-header>div{
+header>div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -48,7 +132,8 @@ header>div{
     border-radius: 10px;
 }
 
-ul{
+
+ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -59,19 +144,19 @@ ul{
     align-items: center;
 }
 
-li>a{
+li>a {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.575);
     border-bottom: 2px solid #007bff00;
 }
 
-li>a:hover{
+li>a:hover {
     color: rgba(255, 255, 255, 0.758);
     transition: all 0.3s;
     border-bottom: 2px solid #007bff9c;
 }
 
-li.active>a{
+li.active>a {
     border-bottom: 2px solid #007aff;
     color: white;
 }
@@ -82,14 +167,47 @@ li.active>a{
 
 }
 
-#app-info{
+#app-info {
     text-align: center;
     margin-top: 42px;
 }
 
+.app-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 1em;
+}
+
 .app-icon {
-    width: 48px;
+    width: 92px;
+    height: 92px;
     border-radius: 25%;
+    background-color: #1DA1F2;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    margin: auto 0px;
+    font-size: 3em;
+}
+
+.app-icon-header {
+    width: 92px;
+    height: 92px;
+    border-radius: 25%;
+    background-color: #2b2b2b;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    margin: auto 0px;
+    font-size: 3em;
 }
 
 .app-name {
@@ -133,7 +251,8 @@ li.active>a{
 }
 
 .screenshot {
-    width: 100%; /* Makes the screenshot adapt to container width */
+    width: 100%;
+    /* Makes the screenshot adapt to container width */
     background-color: #333333;
     border-radius: 15px;
     background-size: cover;
@@ -143,16 +262,18 @@ li.active>a{
     margin: auto;
     border: 2px solid #333333;
     width: 15rem;
-    aspect-ratio: 1 / 2.17; /* Maintain aspect ratio 1:2.17 */
+    aspect-ratio: 1 / 2.17;
+    /* Maintain aspect ratio 1:2.17 */
 }
 
 .screenshot::before {
     content: '';
     display: block;
-    padding-top: calc(100% / 2.17); /* Maintain aspect ratio 1:2.17 */
+    padding-top: calc(100% / 2.17);
+    /* Maintain aspect ratio 1:2.17 */
 }
 
-.screenshot > * {
+.screenshot>* {
     position: absolute;
     top: 0;
     left: 0;
@@ -164,7 +285,8 @@ li.active>a{
     text-align: left;
 }
 
-.feature-title, h2 {
+.feature-title,
+h2 {
     font-size: 1.5em;
     font-weight: bold;
     color: #cacaca;
@@ -173,22 +295,22 @@ li.active>a{
 
 .feature-content {
     font-size: 1em;
-    color: #b4b4b4;
+    color: #bbbbbb;
     line-height: 1.5;
 }
 
-div.feature{
+div.feature {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-div.feature>div{
+div.feature>div {
     flex: 1;
 }
 
-.flipped{
+.flipped {
     flex-direction: row-reverse !important;
     text-align: right;
 }
@@ -198,29 +320,28 @@ a {
     color: white;
 }
 
-footer{
-    background-color: #151E29;
+footer {
+    background-color: #000000;
     width: 100%;
     height: fit-content;
     min-height: 10vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 12px;
+    justify-content: end;
+    align-items: end;
+    text-align: right;
     box-sizing: border-box;
-    margin: 12px;
-    
+
 }
 
-footer>p{
+footer>p {
     color: rgba(255, 255, 255, 0.575);
     font-size: 1em;
     margin: 12px;
     padding: 12px;
+    max-width: 50%;
 }
 
-section{
+section {
     background-color: #090c11;
     width: 100%;
     height: 20vh;
@@ -229,10 +350,10 @@ section{
     align-items: center;
     text-align: center;
     padding: 12px;
-    margin: 12px;
+    margin: 12px 12p 0px 12px;
 }
 
-section>div{
+section>div {
     width: 60vw;
     display: flex;
     justify-content: space-between;
@@ -240,16 +361,16 @@ section>div{
     text-align: center;
 }
 
-section>div>a{
+section>div>a {
     background-color: #6e5494 !important;
 }
 
-section>div>div{
+section>div>div {
     flex-grow: 1;
     text-align: left;
 }
 
-hr{
+hr {
     width: 80%;
     margin: 20px 0;
     border: 1px solid #333333;
@@ -259,19 +380,20 @@ hr{
 }
 
 
-a.inline{
+a.inline {
     text-decoration: underline;
     text-underline-offset: 2px;
 }
 
-button.noUI{
+button.noUI {
     all: unset;
     cursor: pointer;
 }
 
 
 .mobileMenu {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -282,55 +404,85 @@ button.noUI{
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     width: 90vw;
-    position: absolute; /* Ensures it overlays the content */
-    top: 4.5em; /* Adjust this value based on your header's height */
+    position: absolute;
+    /* Ensures it overlays the content */
+    top: 4.5em;
+    /* Adjust this value based on your header's height */
     left: 50%;
-    transform: translateX(-50%) translateY(-10px); /* Start slightly above */
+    transform: translateX(-50%) translateY(-10px);
+    /* Start slightly above */
     border-radius: 10px;
-    z-index: 1000; /* Ensures it's above other elements */
+    z-index: 1000;
+    /* Ensures it's above other elements */
     flex-wrap: wrap;
     -webkit-animation: fadeOut .2s;
     animation: fadeOut .2s;
-    
+
 }
 
 .showMenu {
-    display: flex; /* Show the menu */
+    display: flex;
+    /* Show the menu */
     -webkit-animation: fadeIn .2s;
     animation: fadeIn .2s;
 }
 
+
+
 @-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
+
 @keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @-webkit-keyframes fadeOut {
-    from { opacity: 1; }
-      to { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
+
 @keyframes fadeOut {
-    from { opacity: 1; }
-      to { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 
-#mobile-header{
-   display: none;
+#mobile-header {
+    display: none;
 }
 
 
-@media screen and (max-width: 734px){
-    header>div{
+
+@media screen and (max-width: 734px) {
+    header>div {
         width: 90vw;
     }
-    
 
-    div.feature{
+
+    div.feature {
         display: flex;
         flex-direction: column !important;
         align-items: center;
@@ -338,33 +490,40 @@ button.noUI{
         text-align: left;
     }
 
-    main{
+    main {
         padding: 10vw;
         padding-top: 0px;
         padding-bottom: 0px;
     }
 
-    section{
+    section {
         height: fit-content;
         padding-top: 10vw;
         padding-bottom: 10vw;
     }
-    section>div{
-        flex-direction: column; 
+
+    section>div {
+        flex-direction: column;
         text-align: center;
-        
+
     }
 
-    section>div>div{
+    section>div>div {
         text-align: center;
     }
 
-    #desktop-header{
+    #desktop-header {
         display: none;
     }
 
-    #mobile-header{
+    #mobile-header {
         display: flex;
+    }
+
+    
+    footer>p {
+
+    max-width: 100%;
     }
 
 

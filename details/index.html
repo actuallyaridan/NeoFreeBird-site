@@ -1,0 +1,164 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoFreeBird</title>
+    <link rel="stylesheet" href="/src/styles.css">
+    <script src="/src/general.js" async></script>
+    <link href="favicon.png" rel="icon" id="site-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header id="desktop-header">
+        <div>
+            <ul>
+                <li><a href="/">NeoFreeBird</a></li>
+                <li class="active"><a href="/details">Details</a></li>
+                <li><a href="/docs">Docs</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://github.com/actuallyaridan/NeoFreeBird"><i class="fa-brands fa-github"
+                            title="GitHub"></i></a></li>
+                <li><a href="https://twitter.com/neofreebird"><i class="fa-brands fa-twitter"
+                            title="Twitter"></i></a></li>
+                <a href="https://github.com/actuallyaridan/NeoFreeBird/releases/" class="get-button"
+                    target="_blank">Get</a>
+            </ul>
+        </div>
+    </header>
+
+    <header id="mobile-header">
+        <div>
+            <ul>
+                <li><a href="/">NeoFreeBird</a></li>
+            </ul>
+            <ul>
+                <li><button class="noUI" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button></li>
+            </ul>
+        </div>
+        <menu class="mobileMenu" id="mobileMenuID">
+            <ul>
+                <li class="active"><a href="/details">Details</a></li>
+                <li><a href="/docs">Docs</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://github.com/actuallyaridan/NeoFreeBird"><i class="fa-brands fa-github"
+                            title="GitHub"></i></a></li>
+                <li><a href="https://twitter.com/neofreebird"><i class="fa-brands fa-twitter"
+                            title="Twitter"></i></a></li>
+                <a href="https://github.com/actuallyaridan/NeoFreeBird/releases/" class="get-button"
+                    target="_blank">Get</a>
+        </menu>
+
+    </header>
+
+    <main class="container">
+        <!-- App Icon and Name -->
+        <div id="app-info">
+            <div class="app-icons">
+                <p class="app-icon-header"><i class="fa-solid fa-circle-info"></i>
+            </div>
+            <p>
+            <h1 class="app-name">Details</h1>
+            <p class="app-description">Find out more about the best Twitter app for iOS.</p>
+        </div>
+        </div>
+        <hr>
+        <div class="accordion">
+            <div class="tab">
+                <input type="checkbox" name="accordion-1" id="whatis">
+                <label for="whatis" class="tab__label">What's NeoFreeBird?
+                </label>
+                <div class="tab__content">
+                    <p>NeoFreeBird is a modified version of the X/Twitter app. It reverts branding, unlocks premium
+                        features, removes ads, disables data-collection, and is in general a vision of how Twitter
+                        would've been had Elon Musk not bought it.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="checkbox" name="accordion-1" id="whyshould">
+                <label for="whyshould" class="tab__label">Why should I use NeoFreeBird?</label>
+                <div class="tab__content">
+                    <p>Whilst you can use the original X app, other modded apps, or the last Twitter-branded version, we
+                        believe NeoFreeBird stands out. We keep NeoFreeBird up to date with new Twitter features and
+                        constantly refine our rebranding, something other modded clients don't do. And compared to using
+                        the last Twitter branded build, NeoFreeBird isn't affected by API changes and X can't detect if
+                        you're using NeoFreeBird.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="checkbox" name="accordion-1" id="issafe">
+                <label for="issafe" class="tab__label">Is NeoFreeBird safe?</label>
+                <div class="tab__content">
+                    <p>The only thing NeoFreeBird does is to replace image assets and language strings, modify feature
+                        flags, and incorporate a modified BHTwitter fork, all of which is available on GitHub, meaning
+                        you can see exactly what makes NeoFreeBird tick.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="checkbox" name="accordion-1" id="whenare">
+                <label for="whenare" class="tab__label">When are new releases coming out?</label>
+                <div class="tab__content">
+                    <p>Due to there only being 3 people working on NeoFreeBird, and all of us having full-time jobs or
+                        school to attend to, we can't provide any form of ETAs on new releases. However, we try to
+                        release new builds every couple of months, so don't worry if you don't see any new releases for
+                        a while - we're just busy.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="checkbox" name="accordion-1" id="android">
+                <label for="android" class="tab__label">When will NeoFreeBird be available for Android?</label>
+                <div class="tab__content">
+                    <p>Never. We are 3 unpaid iOS developers, we have no experience working with Android apps, and even
+                        if we'd love to expand to Android, we don't think we'd make a good enough product to release it.
+                        However, you can use Piko Twitter, which is similar to NeoFreeBird.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="checkbox" name="accordion-1" id="web">
+                <label for="web" class="tab__label">When will NeoFreeBird be available for the Web?</label>
+                <div class="tab__content">
+                    <p>Never. However, you can use Control Panel for Twitter, a very nice extension that we personally
+                        use that that helps us make NeoFreeBird.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="checkbox" name="accordion-1" id="canihelp">
+                <label for="canihelp" class="tab__label">Can I contribute?</label>
+                <div class="tab__content">
+                    <p>Sure! Fork our repository, make your changes and submit a pull request! Be aware that we deeply
+                        value quality, so your pull request may be rejected until it meets our standards.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="checkbox" name="accordion-1" id="canyouadd">
+                <label for="canyouadd" class="tab__label">Can you add (insert anything)?</label>
+                <div class="tab__content">
+                    <p>We welcome all feature requests, however, please submit it on GitHub. If you tweet it to us,
+                        chances are very high that we'll miss it.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="checkbox" name="accordion-1" id="foundabug">
+                <label for="foundabug" class="tab__label">I found a bug.</label>
+                <div class="tab__content">
+                    <p>Thanks for letting us know! Please submit it on GitHub. If you tweet it to us,
+                        chances are very high that we'll miss it.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>NeoFreeBird is a fork of nyathea's FreeBird and is developed by <a class="inline"
+                href="https://twitter.com/actuallyaridan">@actuallyaridan</a>, <a class="inline"
+                href="https://twitter.com/nyaathea">@nyaathea</a> and <a class="inline"
+                href="https://twitter.com/timi2506">@timi2506</a> and is not made, promoted or sanctioned by Twitter/X.
+        </p>
+    </footer>
+</body>
+
+</html>
